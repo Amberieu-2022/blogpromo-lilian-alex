@@ -127,12 +127,45 @@ header{
 	min-width: 50%;
 }
 
+.index-header-nav-li:hover > .index-header-nav-lien:after{
+    background-repeat: no-repeat;
+	background-size: contain;
+    display: block;
+	margin: 0 auto;
+	position: relative;
+	height: 100px;
+    content:"";
+}
+
+.index-header-nav-list > :nth-child(1) > :first-child:after{
+	background-image: url('../ressource/other/chalk-line.png');
+	width: 80%;
+	left: 0;
+	top: -20px;
+}
+
+.index-header-nav-list > :nth-child(2) > :first-child:after{
+	background-image: url('../ressource/other/chalk-line-2.png');
+	width: 50%;
+	left: 0;
+	top: -20px;
+}
+
+.index-header-nav-list > :nth-child(3) > :first-child:after{
+	background-image: url('../ressource/other/chalk-line-3.png');
+	width: 90%;
+	left: 0;
+	top: -20px;
+}
+
 .index-header-nav-lien{
+	display: block;
 	text-decoration: none;
 	font-family: 'Chawp';
 	font-size: 1.5vw;
 	color: #fff;
 	line-height: 80px;
+	text-align: center;
 }
 
 /* Nav Burger */
@@ -155,12 +188,13 @@ header{
 
 .index-header-input{
 	max-width: 500px;
-	width: 100%;
+	width: 98%;
 	height: 40px;
 	border-radius: 8px;
 	border: none;
 	font-size: 1.5vw;
-	margin-right: 2vw;
+	padding-left: 2%;
+	margin: 0 2vw;
 }
 
 .index-header-input:focus-visible{
@@ -289,6 +323,10 @@ header{
 	.index-header-burger-container{
 		display: block;
 		min-width: 15%;
+	}
+
+	.index-header-nav-li:hover > .index-header-nav-lien:after{
+		display: none;
 	}
 }
 
