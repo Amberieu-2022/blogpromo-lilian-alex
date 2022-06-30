@@ -5,10 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./templates/ressource/logos/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./templates/css/style.css">
     <title>Blog de la Promo 122 | Accueil</title>
 </head>
 <body>
+
+    <header>
+        <div class="row-limit-size flex-between margin-auto">
+            <figure class="index-header-figure"><img src="./templates/ressource/logos/logo_v1_negatif.png" alt="Logo de la Promo 122" class="index-header-logo"></figure>
+            <nav class="grow-basis index-header-nav" id="header-nav">
+                <ul class="flex-around index-header-nav-list">
+                    <li class="index-header-nav-li"><a href="./index.html" class="index-header-nav-lien">Accueil</a></li>
+                    <li class="index-header-nav-li"><a href="./blog.html" class="index-header-nav-lien">Blog</a></li>
+                    <li class="index-header-nav-li"><a href="./team.html" class="index-header-nav-lien">Notre equipe</a></li>
+                </ul>
+            </nav>
+            <div class="grow-basis index-header-form-container">
+                <form action="#" method="POST" class="flex-between">
+                    <input type="text" name="search" class="index-header-input grow-basis">
+                    <input type="image" src="./templates/ressource/icons/search.png" class="index-header-submit">
+                </form>
+            </div>
+            <div class="index-header-burger-container" id="burger-container">
+                <div class="menu-button" id="menu-button-top"></div>
+                <div class="menu-button" id="menu-button-center"></div>
+                <div class="menu-button" id="menu-button-bottom"></div>
+            </div>
+            <nav class="index-header-nav-burger" id="header-nav-burger">
+                <ul class="flex-around index-header-nav-list">
+                    <li class="index-header-nav-li"><a href="./index.html" class="index-header-nav-lien">Accueil</a></li>
+                    <li class="index-header-nav-li"><a href="./blog.html" class="index-header-nav-lien">Blog</a></li>
+                    <li class="index-header-nav-li"><a href="./team.html" class="index-header-nav-lien">Notre equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
+
+    <script src="./templates/js/main.js"></script>
 </body>
 </html>
