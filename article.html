@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./templates/ressource/logos/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./templates/css/style.css">
     <title>Blog de la Promo 122 | Article</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="full-size-header">
+            <div class="row-limit-size flex-between margin-auto">
+                <figure class="header-figure"><a href="./index.html"><img
+                            src="./templates/ressource/logos/logo_v1_negatif.png" alt="Logo de la Promo 122"
+                            class="header-logo"></a></figure>
+                <nav class="grow-basis header-nav" id="header-nav">
+                    <ul class="flex-around header-nav-list">
+                        <li class="header-nav-li grow-basis"><a href="./index.html" class="header-nav-lien">Accueil</a></li>
+                        <li class="header-nav-li grow-basis"><a href="./blog.html" class="header-nav-lien">Blog</a></li>
+                        <li class="header-nav-li grow-basis"><a href="./team.html" class="header-nav-lien">Notre equipe</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="grow-basis header-form-container">
+                    <form action="#" method="POST" class="flex-between">
+                        <input type="text" name="search" class="header-input grow-basis">
+                        <input type="image" src="./templates/ressource/icons/search.png" class="header-submit">
+                    </form>
+                </div>
+                <div class="header-burger-container" id="burger-container">
+                    <div class="menu-button" id="menu-button-top"></div>
+                    <div class="menu-button" id="menu-button-center"></div>
+                    <div class="menu-button" id="menu-button-bottom"></div>
+                </div>
+            </div>
+        </div>
+            
+        <nav class="header-nav-burger" id="header-nav-burger">
+            <ul class="flex-around header-nav-list">
+                <li class="header-nav-li"><a href="./index.html" class="header-nav-lien">Accueil</a></li>
+                <li class="header-nav-li"><a href="./blog.html" class="header-nav-lien">Blog</a></li>
+                <li class="header-nav-li"><a href="./team.html" class="header-nav-lien">Notre equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>
+        <div class="row-limit-size margin-auto">
+            <hr>
+            <h3 class="footer-fontstyle text-center">Blog de la promo 122</h3>
+            <p class="footer-fontstyle text-center">retrouvez ici tous nos articles et notre equipe</p>
+            <div class="footer-media">
+                <p class="footer-fontstyle footer-media-title text-center">reseaux sociaux</p>
+                <div class="flex-center">
+                    <figure class="footer-icon-container"><a href="https://www.facebook.com/Onlineformapro" target="_blank"><img src="./templates/ressource/icons/facebook.png" alt="Icone de Facebook" class="footer-icon"></a></figure>
+                    <figure class="footer-icon-container"><a href="https://www.instagram.com/acsonlineformapro/" target="_blank"><img src="./templates/ressource/icons/instagram.png" alt="Icone d'Instagram" class="footer-icon"></a></figure>
+                    <figure class="footer-icon-container"><a href="https://www.linkedin.com/company/onlineformapro/" target="_blank"><img src="./templates/ressource/icons/linkedin.png" alt="Icone de LinkedIn" class="footer-icon"></a></figure>
+                </div>
+            </div>
+            <div class="flex-center footer-copyright-container">
+                <figure class="footer-copyright-icon-container"><img src="./templates/ressource/icons/copyright.png" alt="Icone de copyright" class="footer-icon"></figure>
+                <p class="footer-fontstyle footer-copyright-text">copyright promo 122</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./templates/js/main.js"></script>
 </body>
+
 </html>

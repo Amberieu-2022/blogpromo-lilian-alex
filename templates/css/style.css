@@ -89,6 +89,11 @@ body{
 	justify-content: space-around;
 }
 
+.flex-center{
+	display: flex;
+	justify-content: center;
+}
+
 .grow-basis{
 	flex-grow: 1;
 	flex-basis: 0;
@@ -98,6 +103,10 @@ body{
 	margin: 0 auto;
 }
 
+.text-center{
+	text-align: center;
+}
+
 /* Accueil */
 
 /* Header */
@@ -105,60 +114,63 @@ body{
 header{
 	height: 80px;
 	padding: 10px 0;
+}
+
+.full-size-header{
+	height: 80px;
+	padding: 10px 0;
 	background-color: #001C19;
 	background-image: url(../ressource/backgrounds/paper-texture.png);
 	background-size: 100%;
+	position: relative;
+	top: -10px;
+	z-index: 1;
 }
 
 /* Logo */
 
-.index-header-logo{
+.header-logo{
 	width: 100%;
 	max-width: 150px;
 }
 
-.index-header-figure{
+.header-figure{
 	min-width: 15%;
 }
 
 /* Nav */
 
-.index-header-nav{
+.header-nav{
 	min-width: 50%;
 }
 
-.index-header-nav-li:hover > .index-header-nav-lien:after{
+.header-nav-li:hover > .header-nav-lien:after{
     background-repeat: no-repeat;
 	background-size: contain;
     display: block;
 	margin: 0 auto;
 	position: relative;
+	top: -20px;
 	height: 100px;
     content:"";
 }
 
-.index-header-nav-list > :nth-child(1) > :first-child:after{
+.header-nav-list > :nth-child(1) > :first-child:after{
 	background-image: url('../ressource/other/chalk-line.png');
 	width: 80%;
-	left: 0;
-	top: -20px;
 }
 
-.index-header-nav-list > :nth-child(2) > :first-child:after{
+.header-nav-list > :nth-child(2) > :first-child:after{
 	background-image: url('../ressource/other/chalk-line-2.png');
 	width: 50%;
-	left: 0;
-	top: -20px;
 }
 
-.index-header-nav-list > :nth-child(3) > :first-child:after{
+.header-nav-list > :nth-child(3) > :first-child:after{
 	background-image: url('../ressource/other/chalk-line-3.png');
 	width: 90%;
-	left: 0;
-	top: -20px;
 }
 
-.index-header-nav-lien{
+.header-nav-lien{
 	display: block;
 	text-decoration: none;
 	font-family: 'Chawp';
@@ -170,23 +182,27 @@ header{
 
 /* Nav Burger */
 
-.index-header-nav-burger{
+.header-nav-burger{
 	display: none;
 }
 
 /* Search Form */
 
-.index-header-form-container{
+.header-form-container{
 	min-width: 25%;
 	margin-top: 20px;
 }
 
-.index-header-submit{
+.header-submit{
 	margin-top: 12px;
 	height: 30px;
 }
 
-.index-header-input{
+.header-submit:active{
+	margin-top: 15px;
+}
+
+.header-input{
 	max-width: 500px;
 	width: 98%;
 	height: 40px;
@@ -197,13 +213,13 @@ header{
 	margin: 0 2vw;
 }
 
-.index-header-input:focus-visible{
+.header-input:focus-visible{
 	outline: none;
 }
 
 /* Menu Burger */
 
-.index-header-burger-container{
+.header-burger-container{
 	display: none;
 	cursor: pointer;
 }
@@ -245,21 +261,21 @@ header{
 /* Header Responsive */
 
 @media screen and (min-width: 1600px) {
-	.index-header-nav-lien{
+	.header-nav-lien{
 		font-size: 24px;
 	}
 
-	.index-header-input{
+	.header-input{
 		font-size: 24px;
 	}
 }
 
 @media screen and (max-width: 1080px) {
-	.index-header-nav-lien{
+	.header-nav-lien{
 		font-size: 15.45px;
 	}
 
-	.index-header-input{
+	.header-input{
 		font-size: 15.45px;
 	}
 	
@@ -269,34 +285,33 @@ header{
 
 	/* Nav */
 
-	.index-header-nav{
+	.header-nav{
 		display: none;
 	}
 
-	.index-header-nav-burger{
+	.header-nav-burger{
 		display: block;
-		position: absolute;
-		z-index: -1;
-		top: -60px;
+		position: relative;
+		top: -260px;
 		left: 0;
 		width: 100%;
 		transition: transform .8s ease-in-out;
 	}
 
 	.new-position{
-		transform: translateY(160px);
+		transform: translateY(250px);
 	}
 
-	.index-header-nav-list{
+	.header-nav-list{
 		display: block;
 	}
 
-	.index-header-nav-li{
+	.header-nav-li{
 		height: 50px;
-		background-color: #1B383599;
+		background-color: #1B3835;
 	}
 
-	.index-header-nav-li::before{
+	.header-nav-li::before{
 		content: '';
 		width: 100%;
 		border-bottom: solid 1px #949494;
@@ -305,7 +320,7 @@ header{
 		z-index: 1;
 	}
 
-	.index-header-nav-lien{
+	.header-nav-lien{
 		line-height: 50px;
 		text-align: center;
 		display: block;
@@ -314,37 +329,115 @@ header{
 
 	/* Logo */
 
-	.index-header-figure{
+	.header-figure{
 		min-width: 30%;
 	}
 
 	/* Menu Burger */
 
-	.index-header-burger-container{
+	.header-burger-container{
 		display: block;
 		min-width: 15%;
 	}
 
-	.index-header-nav-li:hover > .index-header-nav-lien:after{
+	.header-nav-li:hover > .header-nav-lien:after{
 		display: none;
 	}
 }
 
 @media screen and (max-width: 500px) {
-	.index-header-figure{
+	.header-figure{
 		min-width: 50%;
 	}
 
-	.index-header-logo{
+	.header-logo{
 		display: block;
 		margin: 0 auto;
 	}
 
-	.index-header-form-container{
+	.header-form-container{
 		display: none;
 	}
 
-	.index-header-burger-container{
+	.header-burger-container{
 		min-width: 50%;
+	}
+}
+
+/* Footer */
+
+.footer-fontstyle{
+	font-family: 'Action Jackson';
+	font-size: 1.5vw;
+	margin-top: 30px;
+}
+
+.footer-icon{
+	width: 70px;
+}
+
+/* Social Media */
+
+.footer-media{
+	width: 25%;
+}
+
+.footer-media-title::after{
+	background-image: url('../ressource/other/chalk-line-4.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+    display: block;
+	margin: 0 auto;
+	position: relative;
+	height: 18px;
+	top: -5px;
+    content:"";
+	width: 90%;
+}
+
+/* Copyright */
+
+.footer-copyright-container{
+	height: 70px;
+}
+
+.footer-copyright-text{
+	line-height: 48px;
+	margin-top: 0;
+}
+
+/* Footer Responsive */
+
+@media screen and (max-width: 1080px) {
+	.footer-fontstyle{
+		font-size: 16.2px;
+	}
+
+	.footer-media-title::after{
+		width: 190px;
+	}
+
+	.footer-icon{
+		width: 50px;
+	}
+
+	.footer-copyright-text{
+		line-height: 35px;
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.footer-media{
+		width: 100%;
+	}
+
+	.footer-media-title{
+		width: 100%;
+	}
+
+	.footer-copyright-container{
+		margin-top: 30px;
 	}
 }
