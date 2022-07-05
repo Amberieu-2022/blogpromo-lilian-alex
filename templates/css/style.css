@@ -93,6 +93,11 @@ body{
 	justify-content: space-around;
 }
 
+.flex-start{
+	display: flex;
+	justify-content: start;
+}
+
 .flex-center{
 	display: flex;
 	justify-content: center;
@@ -109,6 +114,11 @@ body{
 
 .text-center{
 	text-align: center;
+}
+
+.sticky{
+	position: sticky;
+	top: 20px
 }
 
 /* Accueil */
@@ -700,3 +710,243 @@ header{
 	}
 }
 
+/* BLOG */
+
+.blog-section, .blog-main{
+	margin: 100px auto;
+}
+
+.blog-section{
+	height: 5000px;
+}
+
+.blog-article-section{
+	width: 70%;
+	flex-wrap: wrap;
+}
+
+.blog-article{
+	background-image: url('../ressource/backgrounds/article-background-long.png');
+	background-size: 100%;
+	width: 40%;
+	max-width: 350px;
+	max-height: 400px;
+	height: 40vh;
+	padding-top: 30px;
+}
+
+.blog-article-left{
+	transform: rotate(-5deg);
+}
+
+.blog-article-right{
+	transform: rotate(3deg);
+}
+
+.pin-article{
+	position: absolute;
+}
+
+.pin-article-left{
+	top: -6%;
+	left: 40%;
+}
+
+.pin-article-right{
+	top: -3%;
+	left: 40%
+}
+
+.blog-article-info-container{
+	width: 90%;
+	margin: 20px auto;
+}
+
+.blog-article-author-container{
+	width: 50%;
+}
+
+.blog-article-icon-container{
+	width: 25px;
+}
+
+.blog-article-icon{
+	width: 100%;
+}
+
+.blog-article-title{
+	text-align: center;
+    font-size: 2vw;
+	font-family: 'Action Jackson';
+	color: #202020;
+	padding-top: 20px;
+}
+
+.blog-article-author{
+	font-family: 'Chawp';
+	font-size: 1.2vw;
+	line-height: 25px;
+	margin-left: 10px;
+	color: #202020;
+	text-align: center;
+}
+
+.blog-article-overview{
+	font-family: 'Chawp';
+	font-size: 1.1vw;
+	color: #202020;
+	text-align: justify;
+	width: 90%;
+	margin: 20px auto;
+	line-height: 1.2;
+}
+
+.blog-article-link{
+	font-family: 'Chawp';
+	font-size: 1.2vw;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	color: #202020;
+	text-decoration: underline;
+}
+
+.blog-aside-section{
+	width: 30%;
+	position: sticky;
+	top: 0;
+}
+
+.blog-aside-containers{
+	padding: 20px 50px;
+	border-left: solid 3px #dedede;
+}
+
+.blog-aside-title{
+	font-family: 'Action Jackson';
+	font-size: 2vw;
+}
+
+.blog-aside-list{
+	margin: 20px;
+}
+
+.blog-aside-li{
+	margin-top: 5px;
+}
+
+.blog-aside-link{
+	font-family: 'Chawp';
+	font-size: 1.1vw;
+	text-decoration: none;
+	color: #dedede;
+}
+
+.blog-aside-cat-link{
+	line-height: 40px;
+	padding: 0 20px;
+}
+
+.pin-aside{
+	width: 50px;
+	height: 50px;
+}
+
+@media screen and (max-width: 1080px) {
+	.blog-article{
+		max-height: 300px;
+	}
+
+	.blog-article-title, .blog-aside-title{
+		font-size: 21.6px;
+	}
+
+	.blog-article-author, .blog-article-link{
+		font-size: 13px;
+	}
+	
+	.blog-article-overview, .blog-aside-link{
+		font-size: 12px;
+	}
+
+	.pin-aside{
+		width: 40px;
+		height: 40px;
+	}
+	
+}
+
+@media screen and (max-width: 900px) {
+
+	.blog-main{
+		margin-top: 20px;
+	}
+
+	.blog-article-section{
+		display: block;
+	}
+
+	.blog-article{
+		margin: 0 auto 50px;
+		width: 80%;
+		height: 50vh;
+		max-width: 500px;
+		max-height: 250px;
+	}
+
+	.blog-article-title{
+		font-size: 35px;
+	}
+
+	.blog-article-author{
+		font-size: 20px;
+	}
+	
+	.blog-article-overview{
+		font-size: 16px;
+	}
+	
+	.blog-article-link{
+		font-size: 20px;
+	}
+
+	.blog-aside-containers{
+		padding: 20px 20px;
+	}
+	
+}
+
+@media screen and (max-width: 550px) {
+	.blog-article-section{
+		display: block;
+	}
+
+	.blog-section{
+		margin: 50px auto;
+	}
+
+	.blog-article-title{
+		font-size: 25px;
+	}
+
+	.blog-article-author{
+		font-size: 16px;
+	}
+	
+	.blog-article-overview{
+		font-size: 14px;
+	}
+	
+	.blog-article-link{
+		font-size: 16px;
+	}
+
+	.blog-aside-section{
+		display: none;
+	}
+
+	.blog-article-section{
+		width: 100%;
+	}
+	
+}
