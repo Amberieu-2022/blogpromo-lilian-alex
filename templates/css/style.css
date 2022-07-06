@@ -950,3 +950,38 @@ header{
 	}
 	
 }
+
+/* TEAM */
+
+.row-limit-size-team{
+	width: clamp(42vw, 850px, 52vw);
+}
+.line-top-bottom{
+	width: clamp(42vw, 850px, 52vw);
+	border-top: 5px white solid;
+	border-bottom: 5px white solid;
+}
+.title-team{
+	font-size: clamp(32px, 96px, 6vw);
+	color: white;
+}
+.sub-title-team{
+	font-size: clamp(26px, 48px, 2vw);
+	color: white;
+	margin: 20px 0;
+}
+.lorem{
+	font-size: clamp(12px, 16px, 24px);
+}
+.left-team{
+	float: left;
+	width: 50%;
+	max-width: 500px;
+	max-height: 800px;
+}
+.right-team{
+	float: right;
+	width: 50%;
+	max-width: 500px;
+	max-height: 800px;
+}
