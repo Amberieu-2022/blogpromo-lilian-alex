@@ -1,4 +1,12 @@
-/* Ajouter les commentaires Wordpress */
+/* 
+Theme Name: Promo 122
+Theme URI: https://localhost
+Author: Lilian et Alexandre
+Author URI: https://localhost
+Description: The Official Theme Blog of Promo 122
+Version: 1.0
+*/
+
 
 /* Reset CSS */
 
@@ -52,20 +60,20 @@ a{
 
 @font-face {
 	font-family: 'Action Jackson';
-	src: url(../font/action-jackson.ttf);
+	src: url('./inc/font/action-jackson.ttf');
 }
 
 @font-face {
 	font-family: 'Chawp';
-	src: url(../font/chawp.otf);
+	src: url('./inc/font/chawp.otf');
 }
 
 /* Général */
 
-body{
+.body-promo{
 	color: #dedede;
 	background-color: #001C19;
-	background-image: url(../ressource/backgrounds/paper-texture.png);
+	background-image: url('./inc/img/backgrounds/paper-texture.png');
 	background-size: 100%;
 	overflow-x: hidden;
 }
@@ -134,7 +142,7 @@ header{
 	height: 80px;
 	padding: 10px 0;
 	background-color: #001C19;
-	background-image: url(../ressource/backgrounds/paper-texture.png);
+	background-image: url('./inc/img/backgrounds/paper-texture.png');
 	background-size: 100%;
 	position: relative;
 	top: -10px;
@@ -170,17 +178,17 @@ header{
 }
 
 .header-nav-list > :nth-child(1) > :first-child:after{
-	background-image: url('../ressource/other/chalk-line.png');
+	background-image: url('./inc/img/other/chalk-line.png');
 	width: 80%;
 }
 
 .header-nav-list > :nth-child(2) > :first-child:after{
-	background-image: url('../ressource/other/chalk-line-2.png');
+	background-image: url('./inc/img/other/chalk-line-2.png');
 	width: 50%;
 }
 
 .header-nav-list > :nth-child(3) > :first-child:after{
-	background-image: url('../ressource/other/chalk-line-3.png');
+	background-image: url('./inc/img/other/chalk-line-3.png');
 	width: 90%;
 }
 
@@ -397,7 +405,7 @@ header{
 }
 
 .footer-media-title::after{
-	background-image: url('../ressource/other/chalk-line-4.png');
+	background-image: url('./inc/img/other/chalk-line-4.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -482,76 +490,73 @@ header{
 
 /* Index Articles Section */
 
-.slider-container{
-	height: 35vh;
-	position: relative;
-}
-
 .index-articles-container{
-	margin: 0 auto;
-	margin-top: 50px;
-	width: 80%;
+	margin: 50px auto;
+	flex-wrap: wrap;
 }
 
 .index-article-lien{
-	max-width: 375px;
-	max-height: 375px;
-	width: 33%;
+	width: 33.3%;
+	margin-top: 50px;
 }
 
 .index-article{
+	position: relative;
     display: block;
 	width: 90%;
-	height: 100%;
+	height: 550px;
     margin: 0 auto;
-    padding: 0;
-    border-radius: 30px;
-    background-image: url('../ressource/backgrounds/article-background-full.png');
-}
-
-.index-article-left{
-	transform: rotate(5deg);
-}
-
-.index-article-center{
-	transform: rotate(-2deg);
-}
-
-.index-article-right{
-	transform: rotate(3deg);
+    background-image: url('./inc/img/backgrounds/article-back.png');
+	background-size: 100%;
 }
 
 .index-article-title{
 	text-align: center;
-    font-size: 2vw;
-	font-family: 'Action Jackson';
+    font-size: 1.5vw;
+	font-family: 'Chawp';
 	color: #202020;
-	padding-top: 20px;
+	padding-top: 8%;
+	margin: 0 auto;
+	width: 90%;
 }
 
-.index-slider-button{
-	width: 80px;
-	height: 80px;
+.index-article > img{
 	position: absolute;
-	top: 37%;
-	cursor: pointer;
-}
-
-#slider-button-left{
-	left: 0;
-}
-
-#slider-button-right{
-	right: 0;
+	top: 200px;
+	left: 5%;
+	width: 90%;
+	height: auto;
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
 }
 
 .index-article-author{
 	font-family: 'Action Jackson';
-	font-size: 1.5vw;
-	margin-top: 10px;
+	font-size: 1.3vw;
+	padding-top: 10%;
 	color: #202020;
 	text-align: center;
 	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+.index-article-pin{
+	position: absolute;
+	top: -30px;
+	left: 45%;
+}
+
+.index-article-scotch{
+	position: absolute;
+	top: 150px;
+	left: 32%;
+	z-index: 1;
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+}
+
+.index-article-scotch > img{
+	width: 70%;
 }
 
 .index-article-overview{
@@ -560,20 +565,32 @@ header{
 	color: #202020;
 	text-align: justify;
 	width: 90%;
-	margin: 20px auto;
+	padding-top: 5%;
+	margin: 0 auto;
 	line-height: 1.2;
 	opacity: 0;
+	transition: opacity .5s ease-in-out;
 }
 
 .index-article:hover > .index-article-author, .index-article:hover > .index-article-overview{
 	opacity: 1;
-	transition: opacity .2s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.index-article:hover > img{
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+.index-article:hover > .index-article-scotch{
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
 }
 
 /* Index Team Section */
 
 .index-team-sign{
-	background-image: url(../ressource/backgrounds/article-background-large.png);
+	background-image: url('./inc/img/backgrounds/article-background-large.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 70%;
@@ -726,7 +743,7 @@ header{
 }
 
 .blog-article{
-	background-image: url('../ressource/backgrounds/article-background-long.png');
+	background-image: url('./inc/img/backgrounds/article-background-long.png');
 	background-size: 100%;
 	width: 40%;
 	max-width: 350px;
@@ -984,4 +1001,66 @@ header{
 	width: 50%;
 	max-width: 500px;
 	max-height: 800px;
+}
+
+/* SINGLE */
+
+.single-article > h2 {
+	margin: 50px auto;
+	display: block;
+	width: 70%;
+	color: #dedede;
+}
+
+.single-article h3 {
+	display: block;
+	font-family: 'Chawp';
+	font-size: 1.5vw;
+	color: #dedede;
+}
+.single-article h4 {
+	display: block;
+	font-family: 'Chawp';
+	font-size: 1.4vw;
+	color: #dedede;
+}
+.single-article h5 {
+	display: block;
+	font-family: 'Chawp';
+	font-size: 1.3vw;
+	color: #dedede;
+}
+.single-article h6 {
+	display: block;
+	font-family: 'Chawp';
+	font-size: 1.2vw;
+	color: #dedede;
+}
+
+.single-article p {
+	display: block;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.1vw;
+	width: 100%;
+	margin: 0 auto 20px;
+	text-align: justify;
+	color: #dedede;
+}
+
+.single-article .wp-block-column img{
+	padding-left: 5%;
+	max-width: 95%;
+}
+
+.single-content-font > figure > img{
+	display: block;
+	margin: 50px auto;
+	width: 50%;
+}
+
+
+
+.single-content-font{
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5vw;
 }
