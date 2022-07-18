@@ -44,3 +44,36 @@ function add_menu_link_class( $atts, $item, $args ) {
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
+
+// Créer des customs posts
+
+add_action('init', 'register_student_post_types'); 
+
+
+function register_student_post_types(){
+    $labels = array(
+        'all_items' => 'Tous les apprenants',
+        'view_items' => 'Voir les apprenants',
+        'singular_name' => 'Apprenant',
+        'add_new' => 'Ajouter un apprenant',
+        'edit_item' => 'Modifier un apprenant',
+        'menu_name' => 'Apprenant',
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'taxonomies' => array('post_tag'),
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-id',
+    );
+    register_post_type('apprenant', $args);
+}
+
+// Ajouter Pagination
+
+
+

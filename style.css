@@ -869,6 +869,33 @@ header{
 	height: 50px;
 }
 
+#theme-navigation{
+	margin-top: 10vh;
+	text-align: center;
+}
+
+#theme-navigation > a{
+	color: #dedede;
+	font-family: 'Chawp';
+	margin-right: 10px;
+	font-size: 1.3vw;
+}
+
+#theme-navigation > span{
+	color: #dedede;
+	font-family: 'Chawp';
+	margin-right: 10px;
+	font-size: 2vw;
+}
+
+#theme-navigation > a.next{
+	margin-left: 2vw;
+}
+
+#theme-navigation > a.prev{
+	margin-right: 2vw;
+}
+
 @media screen and (max-width: 1080px) {
 	.blog-article{
 		max-height: 300px;

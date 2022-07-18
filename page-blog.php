@@ -2,27 +2,22 @@
 get_header();
 ?>
 
-<main>
-
-        <section class="index-sections index-home row-limit-size">
-            <p class="index-titles">Bienvenue sur le</p><h1 class="index-home-title index-titles">blog de la promo 122</h1>
-            <figure class="index-home-figure"><img src="<?php echo get_template_directory_uri() ?>/inc/img/logos/logo_v1_negatif.png" alt="Logo de la Promo 122" class="index-home-logo"></figure>
-        </section>
-
-        <section class="index-sections index-articles-section row-limit-size">
-            <h2 class="index-titles">Nos derniers articles</h2>
+<section class="index-sections index-articles-section row-limit-size" id="content">
+            <h2 class="index-titles">Nos articles</h2>
             <div class="index-articles-container flex-start">
                 <?php
-                    $last10 = new WP_query();
-                    $last10->query('showposts=6')
+                    $args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                    );
+                    $query = new WP_Query($args);
                 ?>
 
                 <?php
                     if(have_posts()){
-                        while($last10->have_posts()){
-                            $last10->the_post();
+                        while($query->have_posts()){
+                            $query->the_post();
                             $categories = get_the_category();
-                            // var_dump($categories);.png
                             $cat = $categories[0]->name;
                             $number = rand(1, 4);
                             $deg = rand(-500, 500)/100;
@@ -54,18 +49,24 @@ get_header();
                     }
                 ?>
             </div>
-        </section>
-
-        <section class="index-sections index-team row-limit-size">
-            <h2 class="index-titles">Notre equipe</h2>
-            <div class="index-team-sign">
-                <p class="index-team-sign-font">Découvrez les membres de la Promo 122 <a href="<?php echo esc_url(get_page_link(14)) ?>" class="index-team-sign-lien">ici</a></p>
+            <div id="theme-navigation">
+            <?php
+                $big = 999999999; // need an unlikely integer
+                
+                echo paginate_links( array(
+                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                    'format' => '?paged=%#%',
+                    'current' => max( 1, get_query_var('paged') ),
+                    'total' => $query->max_num_pages,
+                    'next_text' => 'Page suivante',
+                    'prev_text' => 'Page precedente'
+                ) );
+            ?>
             </div>
-        </section> 
+            <?php
 
-
-        
-    </main>
+            ?>
+        </section>
 
 <?php
 get_footer();
