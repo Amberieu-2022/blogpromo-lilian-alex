@@ -8,10 +8,10 @@ add_filter('login_errors', function(){ return 'error';});
 
 // Récupérer fichier css
 function promo_script(){
-    wp_enqueue_style('main-', get_theme_file_uri('style.css'));
+    wp_enqueue_style('main', get_theme_file_uri('style.css'));
 }
 
-add_action('wp_enqueue_script', promo_script());
+add_action('wp_enqueue_scripts', 'promo_script');
 
 // Changer longueur excerpt
 
